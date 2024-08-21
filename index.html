@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <title>Kevin Maresca</title>
+</head>
+<body>
+  <div class="header">
+    <!-- <div class="logo-img">
+
+    </div> -->
+    <div class="nav">
+      <div class="nav-portfolio">
+        <a href="#Portfolio">Portfolio</a>
+      </div>
+      <div class="nav-contact">
+        <a href="#Contact">Contact</a>
+      </div>
+      <div class="socials">
+        <a href="https://www.instagram.com/7.witak/" target="_blank">
+        <img src="./imgs/Instagram_Glyph_White.png" alt="Link to Instagram Page" class="socials-icon">
+        </a>
+      </div>
+    </div>
+    
+  </div>
+  
+  <div class="intro">
+    <img class="intro-img" src="./imgs/Smile-Tank.jpg" alt="Image of Kevin smiling and looking to the side.">
+     <div class="intro-text hidden">
+      <div class="intro-name text-anim">KEVIN MARESCA</div>
+      <div class="intro-subhead">
+        <p class="line1 tex-anim">Originally from Milan.</p>
+        <p class="line2 text-anim">Passionate, hard-working, ambitious.</p>
+      </div>
+     </div>
+  </div>
+
+  <div class="about hidden">
+    <div class="about-container">
+      <div class="category">
+        <div class="about-category">AGENCY</div>
+        <div class="about-data">
+          <a href="https://www.aftalentmanagement.com/talent/kevin-maresca"><u>AFTM</u></a>
+        </div>
+      </div>
+      <div class="category">
+        <div class="about-category">LOCAL WORK</div>
+        <div class="about-data">New York, DC, Miami</div>
+      </div>
+      <div class="category">
+        <div class="about-category">STATS</div>
+        <div class="about-data stats text-anim">
+          <div class="stat-values">Height: <span>6'2/188cm </span></div>
+          <div class="stat-values">Weight: <span>180lbs/82kg</span></div>
+          <div class="stat-values">Chest: <span>42"/107cm</span></div>
+          <div class="stat-values">Waist: <span>32"/81cm</span></div>
+          <div class="stat-values">Inseam: <span>32"/81cm</span></div>
+          <div class="stat-values">Shoes: <span>10.5/44</span></div>
+          <div class="stat-values">Eyes: <span>Brown</span></div>
+          <div class="stat-values">Hair: <span>Brown</span></div>
+        </div>
+      </div>
+    </div>
+  </div> 
+
+  <div class="portfolio hidden" id="Portfolio">
+      <div class="title-head">
+        <p class="title">PORTFOLIO</p>
+        <hr class="title-line">
+      </div>
+    
+      <div class="portfolio-container">
+        <div class="ptfl-col col-b">
+          <div class="img1">
+            <img src="./imgs/Portfolio/Closeup-CleanBackdrop-Candid.JPG">
+          </div>
+          <div class="img1">
+            <img src="./imgs/Portfolio/Medium-Studio-Mannie.JPG">
+          </div>
+          <div class="img1">
+            <img src="./imgs/Portfolio/IMG_0155.JPG">
+          </div>
+        </div>
+
+        <div class="ptfl-col col-a">
+          <div class="img1">
+            <img src="./imgs/Portfolio/Medium-Studio-Commerical.jpeg">
+          </div>
+          <div class="img1">
+            <img src="./imgs/Portfolio/Medium-Studio-Body.JPG">
+          </div>
+          <div class="img1">
+            <img src="./imgs/Portfolio/Fullbody-Runway-Fashion.JPG">
+          </div>
+          <div class="img1">
+            <img src="./imgs/Portfolio/IMG_0161.JPG" alt="">
+          </div>
+        </div>
+
+        <div class="ptfl-col col-b">
+          <div class="img1">
+            <img src="./imgs/Portfolio/Medium-Studio-Smile.JPG">
+          </div>
+          <div class="img1">
+            <img src="./imgs/Portfolio/IMG_0748.JPG">
+          </div>
+          <div class="img1">
+            <img src="./imgs/Portfolio/Fullbody-Outdoor-Lifestyle.jpg">
+          </div>
+        </div>
+
+
+      </div>
+      <div class="popup-imgs">
+        <span>&times;</span>
+        <img src="./imgs/Portfolio/Closeup-CleanBackdrop-Candid.JPG">
+      </div>
+  </div>
+  
+
+  <div class="contact hidden" id="Contact">
+    <div class="contact-container">
+      <div class="title-head">
+        <p class="title">CONTACT</p>
+        <hr class="title-line">
+      </div>
+      <div class="contact-area">
+        <form id= "form" class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="009b63cc-d38c-4943-b121-0253de6edc02">
+            <input type="checkbox" name="botcheck" id="" style="display: none;">
+            <div class="form-row">
+              <input type="text" id="name" name="name" placeholder="Name" class="input-small" required>
+            </div>
+            <div class="form-row">
+              <input type="text" id="location" name="surname" placeholder="Surname" class="input-small"> 
+            </div>
+            <div class="form-row">
+                <input type="text" id="socials" name="email" placeholder="E-mail" required>
+            </div>
+            <div class="form-row">
+              <input type="text" id="other" name="website" placeholder="Website/Socials" required>
+            </div>
+            <div class="form-row">
+                <textarea type="text" id="inquiry" name="inquiry" placeholder="Your Inquiry" required></textarea>
+            </div>
+            <input type="hidden" name="redirect" value="https://web3forms.com/success" >
+            <button>SUBMIT</button>
+            <div id="result"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-left">
+        &#169; Kevin Maresca - 7's Services LLC
+      </div>
+  </footer>
+
+
+</body>
+
+  <script>
+    document.querySelectorAll('.img1 img').forEach(image => {
+      image.onclick = () => {
+        document.querySelector('.popup-imgs').style.display = 'block';
+        document.querySelector('.popup-imgs img').src = image.getAttribute('src');
+      }
+    })
+
+    document.querySelector('.popup-imgs span').onclick = () =>{
+      document.querySelector('.popup-imgs').style.display = 'none';
+    }
+
+    const form = document.getElementById('form');
+    const result = document.getElementById('result');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const formData = new FormData(form);
+      const object = Object.fromEntries(formData);
+      const json = JSON.stringify(object);
+      result.innerHTML = "Please wait..."
+
+        fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: json
+            })
+            .then(async (response) => {
+                let json = await response.json();
+                if (response.status == 200) {
+                    result.innerHTML = json.message;
+                } else {
+                    console.log(response);
+                    result.innerHTML = json.message;
+                }
+            })
+            .catch(error => {
+                console.log(error);
+                result.innerHTML = "Something went wrong!";
+            })
+            .then(function() {
+                form.reset();
+                setTimeout(() => {
+                    result.style.display = "none";
+                }, 3000);
+            });
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        console.log(entry)
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+        else {
+          entry.target.classList.remove('show');
+        }
+      })
+    })
+
+    const hiddenElements = document.querySelectorAll('.hidden');
+    hiddenElements.forEach((el) => observer.observe(el));
+    
+
+    // const observer = new IntersectionObserver((texts) => {
+    //   entries.forEach((text) => {
+    //     console.log(text)
+    //     if (entry.isIntersecting) {
+    //       entry.target.classList.add('in-place');
+    //     }
+    //     else {
+    //       entry.target.classList.remove('in-place');
+    //     }
+    //   })
+    // })
+
+    // const hiddenElements = document.querySelectorAll('.text-anim');
+    // hiddenElements.forEach((txt) => observer.observe(txt));
+  </script>
+
+</html> 
