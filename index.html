@@ -69,13 +69,26 @@
     </div>
   </div> 
 
-  <div class="portfolio hidden" id="Portfolio">
+  <div class="portfolio" id="Portfolio">
       <div class="title-head">
         <p class="title">PORTFOLIO</p>
         <hr class="title-line">
       </div>
-    
+
       <div class="portfolio-container">
+        <img class="img1" src="./imgs/Portfolio/Closeup-CleanBackdrop-Candid.JPG" class="img1">
+        <img class="img1" src="./imgs/Portfolio/Medium-Studio-Commerical.jpeg" class="img1">
+        <img class="img1" src="./imgs/Portfolio/Medium-Studio-Smile.JPG" class="img1">
+        <img class="img1" src="./imgs/Portfolio/Medium-Studio-Mannie.JPG" class="img1">
+        <img class="img1" src="./imgs/Portfolio/Medium-Studio-Body.JPG" class="img1">
+        <img class="img1" src="./imgs/Portfolio/IMG_0155.JPG" class="img1">
+        <img class="img1" src="./imgs/Portfolio/IMG_0748.JPG" class="img1">
+        <img class="img1" src="./imgs/Portfolio/Fullbody-Runway-Fashion.JPG" class="img1">
+        <img class="img1" src="./imgs/Portfolio/IMG_0161.JPG" class="img1" alt="">
+        <img class="img1" src="./imgs/Portfolio/Fullbody-Outdoor-Lifestyle.jpg" >
+      </div>
+    
+      <!-- <div class="portfolio-container">
         <div class="ptfl-col col-b">
           <div class="img1">
             <img src="./imgs/Portfolio/Closeup-CleanBackdrop-Candid.JPG">
@@ -114,13 +127,15 @@
             <img src="./imgs/Portfolio/Fullbody-Outdoor-Lifestyle.jpg">
           </div>
         </div>
-
-
-      </div>
+      </div> -->
       <div class="popup-imgs">
-        <span>&times;</span>
-        <img src="./imgs/Portfolio/Closeup-CleanBackdrop-Candid.JPG">
+        <span class="close" onclick="closePopup()">&times;</span>
+        <span class="prev" onclick="prevImg()">&#10094;</span>
+        <span class="next" onclick="nextImg()">&#10095;</span>
+        <img id="popup-image" src="" alt="Portfolio Image">
       </div>
+      
+      
   </div>
   
 
@@ -168,17 +183,35 @@
 
 </body>
 
-  <script>
-    document.querySelectorAll('.img1 img').forEach(image => {
-      image.onclick = () => {
-        document.querySelector('.popup-imgs').style.display = 'block';
-        document.querySelector('.popup-imgs img').src = image.getAttribute('src');
-      }
-    })
+<script>
+    
 
-    document.querySelector('.popup-imgs span').onclick = () =>{
-      document.querySelector('.popup-imgs').style.display = 'none';
-    }
+//     let currentIndex = 0;
+// const images = [
+//   'path-to-image1.jpg',
+//   'path-to-image2.jpg',
+//   'path-to-image3.jpg'
+// ];
+
+// function showPopup(index) {
+//   document.querySelector('.popup-imgs').style.display = 'block';
+//   currentIndex = index;
+//   document.getElementById('popup-image').src = images[currentIndex];
+// }
+
+// function closePopup() {
+//   document.querySelector('.popup-imgs').style.display = 'none';
+// }
+
+// function nextImg() {
+//   currentIndex = (currentIndex + 1) % images.length;
+//   document.getElementById('popup-image').src = images[currentIndex];
+// }
+
+// function prevImg() {
+//   currentIndex = (currentIndex - 1 + images.length) % images.length;
+//   document.getElementById('popup-image').src = images[currentIndex];
+// }
 
     const form = document.getElementById('form');
     const result = document.getElementById('result');
@@ -235,20 +268,58 @@
     hiddenElements.forEach((el) => observer.observe(el));
     
 
-    // const observer = new IntersectionObserver((texts) => {
-    //   entries.forEach((text) => {
-    //     console.log(text)
-    //     if (entry.isIntersecting) {
-    //       entry.target.classList.add('in-place');
-    //     }
-    //     else {
-    //       entry.target.classList.remove('in-place');
-    //     }
-    //   })
-    // })
+    
+    document.querySelectorAll('.portfolio img').forEach(image => {
+      image.onclick = () => {
+        document.querySelector('.popup-imgs').style.display = 'block';
+        document.querySelector('.popup-imgs img').src = image.getAttribute('src');
+      }
+    })
 
-    // const hiddenElements = document.querySelectorAll('.text-anim');
-    // hiddenElements.forEach((txt) => observer.observe(txt));
-  </script>
+    document.querySelector('.popup-imgs span').onclick = () =>{
+      document.querySelector('.popup-imgs').style.display = 'none';
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+    let currentImgIndex = 0; // Track current image index
+
+    const images = document.querySelectorAll('.portfolio-container img'); // All images in the portfolio
+    const popupImg = document.querySelector('.popup-imgs img'); // The img element in the popup
+
+  function showPopup(index) {
+    currentImgIndex = index;
+    popupImg.src = images[currentImgIndex].src;
+    document.querySelector('.popup-imgs').style.display = 'block';
+  }
+
+  // Left arrow click event
+  document.querySelector('.prev').addEventListener('click', () => {
+    if (currentImgIndex > 0) {
+      currentImgIndex--; // Decrease the index
+    } else {
+      currentImgIndex = images.length - 1; // Loop back to the last image
+    }
+    popupImg.src = images[currentImgIndex].src; // Update the popup image src
+  });
+
+  // Right arrow click event
+  document.querySelector('.next').addEventListener('click', () => {
+    if (currentImgIndex < images.length - 1) {
+      currentImgIndex++; // Increase the index
+    } else {
+      currentImgIndex = 0; // Loop back to the first image
+    }
+    popupImg.src = images[currentImgIndex].src; // Update the popup image src
+  });
+
+  // Add event listeners to portfolio images to show the popup
+  images.forEach((img, index) => {
+    img.addEventListener('click', () => {
+      showPopup(index);
+    });
+  });
+});
+
+</script>
 
 </html> 
