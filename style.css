@@ -261,6 +261,7 @@ p {
   width: 40%;
   object-fit: cover;
   z-index: 100000;
+  max-height: 90vh;
 }
 
 .popup-imgs .prev, .popup-imgs .next {
